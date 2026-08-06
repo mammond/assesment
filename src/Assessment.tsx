@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Save, Printer, Copy, Download, RefreshCw, Wand2, Plus, Trash2, Activity, FileText } from 'lucide-react';
 import { PatientData, FamilyMember } from './types';
+import { PrintForm } from './PrintForm';
 
 export function Assessment() {
   const [formData, setFormData] = useState<PatientData>({
@@ -203,9 +204,12 @@ export function Assessment() {
   const labelClass = "block text-sm font-medium text-slate-700";
 
   return (
-    <div className="space-y-8 animate-in fade-in duration-500 pb-12 print:m-0 print:p-0">
+    <div className="w-full">
+      <PrintForm data={formData} classification={classification} />
       
-      {/* Form Header */}
+      <div className="space-y-8 animate-in fade-in duration-500 pb-12 print:hidden">
+        
+        {/* Form Header */}
       <div className="bg-white p-6 rounded-2xl border border-sage-100 shadow-sm flex justify-between items-center print:hidden">
         <div>
           <h2 className="text-xl font-bold text-slate-800">New Patient Assessment</h2>
@@ -577,6 +581,7 @@ export function Assessment() {
 
         </div>
       </div>
+    </div>
     </div>
   );
 }
