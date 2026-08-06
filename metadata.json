@@ -1,0 +1,6 @@
+{
+  "name": "Medical Social Work Assessment Tool",
+  "description": "Comprehensive MSWD Dashboard and Patient Assessment Tool with AI Narrative Generation",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
